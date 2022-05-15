@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         testPartA();
-        testPartB();
+        //testPartB();
     }
 
     private static void testPartA() {
@@ -39,6 +39,7 @@ public class Main {
         System.out.println("new: " + new AccurateClock(5, 6, 3));
     }
 
+    /*
     private static void testPartB() {
         System.out.println("--------------- Tests for part B ---------------");
 
@@ -185,3 +186,4 @@ public class Main {
         printExpression(exp, name, false);
     }
 }
+     */
