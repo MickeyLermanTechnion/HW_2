@@ -3,9 +3,12 @@ public class DoubleLiteral extends Expression{
 
     public DoubleLiteral(Number value){this.value=value;}
 
+    @Override
     public String toString(){
         return this.value.toString();
     }
+
+    @Override
     public double evaluate(){
         return this.value.doubleValue();
     }
