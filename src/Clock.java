@@ -1,6 +1,6 @@
 public class Clock {
     private int hours, minutes;
-    public Clock(int hours, int minutes, int seconds){
+    public Clock(int hours, int minutes){
         this.hours = hours;
         this.minutes = minutes;
     }
