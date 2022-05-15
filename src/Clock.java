@@ -29,7 +29,7 @@ public class Clock {
         }
         this.minutes = minutes;
     }
-
+    @Override
     public String toString(int hours, int minutes){
         if (hours>9){
             if(minutes>9) {
@@ -50,6 +50,7 @@ public class Clock {
         }
     }
 
+    @Override
     public boolean equals(Object o){
         if (this == o) return true;
         if(this instanceof Clock && this.toString().length()==o.toString().length()){
