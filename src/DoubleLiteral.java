@@ -5,7 +5,7 @@ public class DoubleLiteral extends Expression{
 
     @Override
     public String toString(){
-        return this.value.toString();
+        return "(" + this.value.doubleValue() + ")";
     }
 
     @Override
