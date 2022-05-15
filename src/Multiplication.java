@@ -1,6 +1,10 @@
 public class Multiplication extends Expression{
-    private Pair<Expression> exp;
+    private Expression[] expToMultiply;
+    public String toString(){
+        return "(" + expToMultiply[0] + " * " + ")";
+    }
 
-    public String toString(){return "3";}
-    public double evaluate(){return 3;}
+    public double evaluate(){
+        return super.evaluate();
+    }
 }
