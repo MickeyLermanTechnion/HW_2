@@ -29,8 +29,8 @@ public class Clock {
         }
         this.minutes = minutes;
     }
-
-    public String toString(int hours, int minutes){
+    @Override
+    public String toString(){
         if (hours>9){
             if(minutes>9) {
                 return this.hours +":"+this.minutes;
@@ -46,10 +46,10 @@ public class Clock {
         else{
             return "0"+ this.hours +":0"+this.minutes;
         }
-
         }
     }
 
+    @Override
     public boolean equals(Object o){
         if (this == o) return true;
         if(this instanceof Clock && this.toString().length()==o.toString().length()){
@@ -59,5 +59,14 @@ public class Clock {
 
             }
         }return false;
+   }
+
+    /** hashCode
+     *
+     * @return number of minutes pass 00:00 o'clock
+     */
+   @Override
+   public int hashCode() {
+        return 60 * hours +minutes;
    }
 }
