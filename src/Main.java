@@ -38,9 +38,7 @@ public class Main {
         System.out.println("o2: " + o2);
         System.out.println("new: " + new AccurateClock(5, 6, 3));
     }
-}
-
-    /*
+/*
     private static void testPartB() {
         System.out.println("--------------- Tests for part B ---------------");
 
@@ -186,5 +184,5 @@ public class Main {
     private static void printExpression(Expression exp, String name) {
         printExpression(exp, name, false);
     }
-}
      */
+}

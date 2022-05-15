@@ -51,8 +51,9 @@ public class Clock {
 
     @Override
     public boolean equals(Object o){
-        if (this == o) return true;
-        if(this instanceof Clock && this.toString().length()==o.toString().length()){
+        if(this == null) {return false;}
+        if (this == o) {return true;}
+        if(o instanceof Clock && this.toString().length()==o.toString().length()){
             Clock other = (Clock)o;
             if(this.hours==other.getHours() && this.minutes==other.getMinutes() ){
                 return true;

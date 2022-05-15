@@ -36,12 +36,12 @@ public class AccurateClock extends Clock {
     }
 
     /**
-     * using the hashCode of the super class to calculate x.
-     * using this and not number of seconds from midnight so that we don't have too many unique hash codes.
-     * @return number of seconds from the beginning of the current hour.
+     * using the hashCode of the super class to calculate the number of seconds from midnight.
+     * that way two clocks with the same time value will have a unique, shared hash code.
+     * @return number of seconds from midnight.
      */
     @Override
     public int hashCode(){
-        return (super.hashCode()*60 + this.seconds)%3600;
+        return super.hashCode()*60 + this.seconds;
     }
 }
