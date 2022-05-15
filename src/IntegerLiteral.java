@@ -6,7 +6,7 @@ public class IntegerLiteral  extends Expression{
 
     @Override
     public String toString(){
-        return value.toString();
+        return  "("+value.intValue()+")";
     }
     @Override
     public double evaluate(){
