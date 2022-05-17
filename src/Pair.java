@@ -1,4 +1,4 @@
-public class Pair<T>{
+public class Pair<T extends Expression>{
     T first,second;
 
     public void Pair(T first, T second){
