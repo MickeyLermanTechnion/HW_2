@@ -1,13 +1,10 @@
 public class Addition extends MultiAddition{
-    public Addition(Expression[] expression1, Expression... expression) {
-        super(expression1, expression);
-    }
-
-    public String toString(){
-        return super.toString();
-    }
-    public double evaluate(){
-
-        return super.evaluate();
-    }
+    /**
+          * represents x*y
+          * @param x
+          * @param y
+         */
+    public Addition(Expression x, Expression y) {super(x,y);}
+    public String toString(){return super.toString();}
+    public double evaluate(){return super.evaluate();}
 }

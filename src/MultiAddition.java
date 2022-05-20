@@ -1,27 +1,18 @@
 public class MultiAddition extends Expression{
-    private Expression[] expression;
 
-    public MultiAddition(Expression[] expression1, Expression... expression) {
-        super(expression);
-        this.expression = expression1;
-    }
+    public MultiAddition(Expression... expressions) {super(expressions);}
 
     @Override
     public String toString(){
-        String expressionString= "(";
-        for (int i=0; i< expression.length;i++){
-            expressionString += (expression[i].toString()+" + "+expression[i+1].toString()+" + ");
-        }
-        return  expressionString += ")";
+        return super.toString(expressions, '+');
     }
 
     @Override
     public double evaluate(){
-        double  expressionVal = 0;
-        for (int i=0; i<expression.length; i++){
-            expressionVal += expression[i].evaluate();
+        double  expVal = 0; //at least two expressions so 0 must exist
+        for (int i=0; i<expLength; i++){
+            expVal += expressions[i].evaluate();
         }
-        return expressionVal;
+        return expVal;
     }
-
 }
