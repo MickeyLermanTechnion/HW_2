@@ -6,6 +6,8 @@ public class MultiMultiplication extends Expression {
     public String toString(){
         return super.toString(expressions, '*');
     }
+
+    @Override
     public double evaluate(){
         double expValue = 0; //at least two expressions so 0 must exist
         for(int i=0; i<expLength; i++){
