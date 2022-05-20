@@ -29,6 +29,10 @@ public class Clock {
         }
         this.minutes = minutes;
     }
+
+    /**
+     * @return String describing the clock in the format HH:MM(H - hours, M - minutes)
+     */
     @Override
     public String toString(){
         if (hours>9){
@@ -49,6 +53,11 @@ public class Clock {
         }
     }
 
+    /**
+     * compares based on HashCode and the values of "hours" and "minutes"
+     * @param o
+     * @return true if the objects have the same HashCode and compared values, else false
+     */
     @Override
     public boolean equals(Object o){
         if(this == null) {return false;}

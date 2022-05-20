@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         testPartA();
-        //testPartB();
+        testPartB();
     }
 
     private static void testPartA() {
@@ -39,7 +39,7 @@ public class Main {
         System.out.println("new: " + new AccurateClock(5, 6, 3));
     }
 
-    /*
+
     private static void testPartB() {
         System.out.println("--------------- Tests for part B ---------------");
 
@@ -105,6 +105,7 @@ public class Main {
                                                                   new IntegerLiteral(3))));
         printExpression(multiMultiplication2, "multiMultiplication2");
 
+        /*
         Expression roundExp1 = new RoundedExpression(new DoubleLiteral(5.123456), 2);
         printExpression(roundExp1, "roundExp1");
 
@@ -169,6 +170,8 @@ public class Main {
 
         Addition exp4 = new Addition(exp3, parsed6);
         printExpression(exp4, "exp4");
+
+         */
     }
 
     private static void printExpression(Expression exp, String name, boolean withClass) {
@@ -185,5 +188,4 @@ public class Main {
     private static void printExpression(Expression exp, String name) {
         printExpression(exp, name, false);
     }
-     */
 }

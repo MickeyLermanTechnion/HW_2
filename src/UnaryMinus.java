@@ -4,9 +4,7 @@ public class UnaryMinus extends Expression{
     }
 
     @Override
-    public String toString() {
-        return "-" + this.expressions[0].toString();
-    }
+    public String toString() {return "(-" + this.expressions[0].toString() + ")";}
     @Override
     public double evaluate(){return (-1) * this.expressions[0].evaluate();}
 }
