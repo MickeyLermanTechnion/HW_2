@@ -1,8 +1,7 @@
 public class IntegerLiteral  extends Expression{
     private Number value;
 
-    public IntegerLiteral(Number value, Expression... expression) {
-        super(expression);
+    public IntegerLiteral(Number value) {
         this.value = value;
     }
 

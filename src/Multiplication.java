@@ -1,7 +1,15 @@
-public class Multiplication extends Expression{
-    private Expression[] expToMultiply;
+public class Multiplication extends MultiMultiplication{
+
+    /**
+     * represents x*y
+     * @param x
+     * @param y
+     */
+    public Multiplication(Expression x, Expression y){
+        super(x,y);
+    }
     public String toString(){
-        return "(" + expToMultiply[0] + " * " + ")";
+        return super.toString();
     }
 
     public double evaluate(){

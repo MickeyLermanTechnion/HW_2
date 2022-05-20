@@ -1,7 +1,7 @@
-public class Pair<T extends Expression>{
+public class Pair<T>{
     T first,second;
 
-    public void Pair(T first, T second){
+    public Pair(T first, T second){
         this.first = first;
         this.second = second;
     }

@@ -53,7 +53,7 @@ public class Clock {
     public boolean equals(Object o){
         if(this == null) {return false;}
         if (this == o) {return true;}
-        if(o instanceof Clock && this.toString().length()==o.toString().length()){
+        if(o instanceof Clock && this.hashCode() == o.hashCode()){
             Clock other = (Clock)o;
             if(this.hours==other.getHours() && this.minutes==other.getMinutes() ){
                 return true;
@@ -68,6 +68,6 @@ public class Clock {
      */
    @Override
    public int hashCode() {
-        return 60 * hours +minutes;
+        return 60 * hours + minutes;
    }
 }

@@ -8,23 +8,26 @@ public class MultiMultiplication extends Expression {
     private int expLength;
 
     public MultiMultiplication(Expression... expressions){
-        this.expLength = expToMultiply.length;
         this.expToMultiply = expressions;
+        this.expLength = expToMultiply.length;
     }
 
     public String toString(){
-        /*
         String expString = "(" + expToMultiply[0]; //at least two expressions so 0 must exist
         for(int i=1; i<expLength; i++){
             expString += " * " + expToMultiply[i].toString();
         }
         return expString + ")";
 
-         */
+
+
+        /*
         String expString = "";
         for(int i=1; i<expLength; i++){
             expString += super.toString();
         }
+
+         */
 
     }
     public double evaluate(){
