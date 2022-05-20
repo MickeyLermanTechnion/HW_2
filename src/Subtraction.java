@@ -1,16 +1,13 @@
-public class Subtraction<X,Y> extends Expression{
-    private Pair<Expression> exp;
-
-    // TODO: CONSTRACTOR
+public class Subtraction extends Expression{
 
     public Subtraction(Expression x, Expression y){
-
+        super(x,y);
     }
 
     public String toString(){
-        return "(" + exp.getFirst().toString() + "-" + exp.getSecond().toString() + ")";
+        return super.toString(this.expressions, '-');
     }
     public double evaluate(){
-        return exp.getFirst().evaluate() - exp.getSecond().evaluate();
+        return this.expressions[0].evaluate() - this.expressions[1].evaluate();
     }
 }
