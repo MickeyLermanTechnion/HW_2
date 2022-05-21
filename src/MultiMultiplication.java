@@ -9,8 +9,8 @@ public class MultiMultiplication extends Expression {
 
     @Override
     public double evaluate(){
-        double expValue = 0; //at least two expressions so 0 must exist
-        for(int i=0; i<expLength; i++){
+        double expValue = this.expressions[0].evaluate(); //at least two expressions so 0 must exist
+        for(int i=1; i<expLength; i++){
             expValue *= expressions[i].evaluate();
         }
         return expValue;

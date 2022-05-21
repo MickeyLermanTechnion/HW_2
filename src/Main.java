@@ -105,7 +105,7 @@ public class Main {
                                                                   new IntegerLiteral(3))));
         printExpression(multiMultiplication2, "multiMultiplication2");
 
-        /*
+
         Expression roundExp1 = new RoundedExpression(new DoubleLiteral(5.123456), 2);
         printExpression(roundExp1, "roundExp1");
 
@@ -138,6 +138,7 @@ public class Main {
                                                                                 new Subtraction(divisionExp, exp3)))))));
         printExpression(massiveExp, "massiveExp");
 
+        /*
         ExpressionParser polishParser = new PolishNotationParser();
         ExpressionParser reversePolishParser = new ReversePolishNotationParser();
 

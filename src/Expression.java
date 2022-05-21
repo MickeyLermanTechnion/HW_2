@@ -18,7 +18,7 @@
     public String toString(Expression[] expressions,  char operator){
         String expString = "(" + expressions[0]; //at least two expressions so 0 must exist
         for(int i=1; i<expLength; i++){
-            expString += operator + expressions[i].toString();
+            expString += " " + operator + " " + expressions[i].toString();
         }
         return expString + ")";
     }

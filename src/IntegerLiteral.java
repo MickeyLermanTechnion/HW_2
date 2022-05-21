@@ -14,6 +14,6 @@ public class IntegerLiteral  extends Expression{
     }
     @Override
     public double evaluate(){
-        return value.intValue();
+        return value.doubleValue();
     }
 }

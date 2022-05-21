@@ -17,6 +17,6 @@ public class RoundedExpression extends Expression{
     }
     //TODO
     @Override
-    public String toString(){}
-    public double evaluate(){}
+    public String toString(){return "a";} //TODO
+    public double evaluate(){return 5.0;} //TODO
 }
