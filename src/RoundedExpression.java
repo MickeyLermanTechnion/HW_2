@@ -1,8 +1,7 @@
 public class RoundedExpression extends Expression{
-    private int numRound;
     public RoundedExpression(Expression x, int numRound) {
-        super(x);
-        this.numRound =numRound;
+        this.expressions[0] =getRoundVal(x, numRound);
+
     }
     private  Expression getRoundVal(Expression x, int numRound){
         //take string, split bt ".", keep only numRound numbers after , ".".join()
@@ -17,6 +16,6 @@ public class RoundedExpression extends Expression{
     }
     //TODO
     @Override
-    public String toString(){return "a";} //TODO
-    public double evaluate(){return 5.0;} //TODO
+    public String toString(){return expressions[0].toString();}
+    public double evaluate(){return expressions[0].evaluate();}
 }
