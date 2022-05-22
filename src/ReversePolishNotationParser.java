@@ -11,16 +11,16 @@ public class ReversePolishNotationParser extends ExpressionParser{
         return createExpression();
     }
     protected Expression callMultiplication(Expression x,Expression y){
-        return new Multiplication(x,y);
+        return new Multiplication(y,x);
     }
     protected Expression callAddition(Expression x,Expression y){
-        return new Addition(x,y);
+        return new Addition(y,x);
     }
     protected Expression callSubtraction(Expression x,Expression y){
-        return new Subtraction(x,y);
+        return new Subtraction(y,x);
     }
     protected Expression callDivision(Expression x,Expression y){
-        return new Division(x,y);
+        return new Division(y,x);
     }
 
 }
