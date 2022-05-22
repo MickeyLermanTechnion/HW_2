@@ -138,7 +138,6 @@ public class Main {
                                                                                 new Subtraction(divisionExp, exp3)))))));
         printExpression(massiveExp, "massiveExp");
 
-        /*
         ExpressionParser polishParser = new PolishNotationParser();
         ExpressionParser reversePolishParser = new ReversePolishNotationParser();
 
@@ -172,7 +171,7 @@ public class Main {
         Addition exp4 = new Addition(exp3, parsed6);
         printExpression(exp4, "exp4");
 
-         */
+        
     }
 
     private static void printExpression(Expression exp, String name, boolean withClass) {

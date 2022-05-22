@@ -1,9 +1,15 @@
 public class RoundedExpression extends Expression{
     public RoundedExpression(Expression x, int numRound) {
-        this.expressions[0] =getRoundVal(x, numRound);
-
+        this.expressions = new Expression[2];
+        this.expressions[0] = getRoundVal(x, numRound);
+        this.expressions[1] = x;
     }
     private  Expression getRoundVal(Expression x, int numRound){
+        double temp = x.evaluate();
+        temp *= Math.pow(10,numRound);
+        temp = Math.round(temp);
+        return new DoubleLiteral(temp/Math.pow(10,numRound));
+        /*
         //take string, split bt ".", keep only numRound numbers after , ".".join()
        String xString = x.toString();
        String[] xParts = xString.split(".");
@@ -13,9 +19,10 @@ public class RoundedExpression extends Expression{
        Double temp = Double.parseDouble(xParts[1]);
 
         return new DoubleLiteral(temp.doubleValue());
+         */
     }
     //TODO
     @Override
-    public String toString(){return expressions[0].toString();}
+    public String toString(){return expressions[1].toString();}
     public double evaluate(){return expressions[0].evaluate();}
 }
