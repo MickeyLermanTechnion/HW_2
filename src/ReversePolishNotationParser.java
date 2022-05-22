@@ -10,4 +10,17 @@ public class ReversePolishNotationParser extends ExpressionParser{
         }
         return createExpression();
     }
+    protected Expression callMultiplication(Expression x,Expression y){
+        return new Multiplication(x,y);
+    }
+    protected Expression callAddition(Expression x,Expression y){
+        return new Addition(x,y);
+    }
+    protected Expression callSubtraction(Expression x,Expression y){
+        return new Subtraction(x,y);
+    }
+    protected Expression callDivision(Expression x,Expression y){
+        return new Division(x,y);
+    }
+
 }

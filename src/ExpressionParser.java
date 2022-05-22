@@ -25,21 +25,21 @@ abstract public class ExpressionParser {
         Expression y;
         switch(value){
             case "*":
-                y = createExpression();
                 x = createExpression();
+                y = createExpression();
                 return callMultiplication(x,y);
             case "+":
-                y = createExpression();
                 x = createExpression();
-                return new Addition(x,y);
+                y = createExpression();
+                return callAddition(x,y);
             case "/":
-                y = createExpression();
                 x = createExpression();
-                return new Division(x,y);
+                y = createExpression();
+                return callDivision(x,y);
             case "-":
-                y = createExpression();
                 x = createExpression();
-                return new Subtraction(x,y);
+                y = createExpression();
+                return callSubtraction(x,y);
             case "-u":
                 x = createExpression();
                 return new UnaryMinus(x);
