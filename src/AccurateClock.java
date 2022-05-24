@@ -20,17 +20,27 @@ public class AccurateClock extends Clock {
         this.seconds = seconds;
     }
 
+    /**
+     * create a String representation in the format: HH:MM:SS
+     * @return String representing the AccurateClock
+     */
     @Override
     public String toString(){
-        if(this.seconds > 9)
+        if(this.seconds > 9) //if num of seconds is lower than 9 we need to add 0 before it to keep the format
             return super.toString() + ":" + this.seconds;
         return super.toString() + ":0" + this.seconds;
     }
 
+    /**
+     * determines if the objects are equals based on them being both AccurateClock type
+     * and their values of "hours", "minutes" and "seconds" being equal
+     * @param other
+     * @return true if the objects are equal and false otherwise
+     */
     @Override
     public boolean equals(Object other){
         if(other==this) {return true;}
-        if(other == null || !(other instanceof AccurateClock)) {return false;}
+        if(!(other instanceof AccurateClock)) {return false;}
         AccurateClock otherAccurateClock = (AccurateClock) other;
         return (super.equals(other) && this.seconds == otherAccurateClock.getSeconds());
     }
