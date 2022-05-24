@@ -10,7 +10,7 @@ public class Multiplication extends MultiMultiplication{
     }
 
     /**
-     * using the super method we can get the representation of a multimultiplication with 2 operands
+     * using the super method we can get the representation of a multiplication with 2 operands
      * @return string the represents the multiplication expression
      */
     @Override
@@ -19,7 +19,7 @@ public class Multiplication extends MultiMultiplication{
     }
 
     /**
-     * using the super method we can calculate a multimultiplication with 2 operands
+     * using the super method we can calculate a multiplication of 2 operands
      * @return the numeric value of the multiply expression
      */
     @Override

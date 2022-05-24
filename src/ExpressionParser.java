@@ -1,5 +1,3 @@
-//import java.util.Stack;
-
 abstract public class ExpressionParser {
     protected Stack<String> expressions;// that way we can read the notations value by value.
     // Polish - entering the values from left to right
