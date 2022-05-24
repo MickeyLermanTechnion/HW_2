@@ -8,5 +8,5 @@ public class Division  extends Expression{
     }
     public double evaluate(){
         return this.expressions[0].evaluate() / this.expressions[1].evaluate();
-    } //CHANGED - WAS '-' INSTEAD OF '/'
+    }
 }

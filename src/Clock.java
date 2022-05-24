@@ -66,7 +66,6 @@ public class Clock {
             Clock other = (Clock)o;
             if(this.hours==other.getHours() && this.minutes==other.getMinutes() ){
                 return true;
-
             }
         }return false;
    }
